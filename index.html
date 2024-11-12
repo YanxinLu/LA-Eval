@@ -139,6 +139,8 @@
         <!-- <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video> -->
+      <p style="text-align: center;">Figure 1: Overview of <strong>LA-Eval</strong>. (1) The cases are collected from widely recognized GitHub repositories, with related information obtained from Semantic Scholar, and the quality is verified by domain experts. (2) Our benchmark consists of two stages. In the retrieval stage, LLMs need to perform three rounds of retrieval to obtain sufficient relevant papers. In the summarization stage, they are prompted to write academic surveys based on the retrieved papers.</p>
+      <br>
       <h2 class="subtitle has-text-centered">
         We proposed <strong> LA-Eval </strong>, a benchmark designed to assess the long-context capabilities of LLMs in multi-turn interactions within AI-assisted research scenarios.
       </h2>
@@ -204,7 +206,7 @@
 </section> -->
 <!-- End image carousel -->
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container  is-max-desktop">
       <div class="columns is-centered">
@@ -232,117 +234,49 @@
       </div>
    </div>
  </div>
-</section>
+</section> -->
 
-
-<section class="section hero is-small  is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <div class="columns is-centered">
       <div class="column is-full">
-        <div class="content">
-          <div>
-         <h2 class="title is-3"  style="text-align: center;">Main Results</h2>
-          <div class="level-set has-text-justified">
-            <p>We use precision, recall, and F1 score to report the performance of the LLM-based agent during the retrieval stage, and use four criteria to achieve a comprehensive evaluation of the generated surveys during the summarization stage, where the dimensions of readability and logicality are used to assess the language-related capabilities of LLMs, while relevance and depth are used to evaluate the domain-related capabilities.</p>
-            <table style="width:100%; border-collapse:collapse;">
-              <thead>
-                  <tr>
-                      <th rowspan="2" style="text-align: center;">Models</th>
-                      <th colspan="3" style="text-align: center;">Retrieval Stage</th>
-                      <th colspan="5" style="text-align: center;">Summarization Stage</th>
-                  </tr>
-                  <tr>
-                      <th>Precision</th>
-                      <th>Recall</th>
-                      <th>F1</th>
-                      <th>Readability</th>
-                      <th>Logicality</th>
-                      <th>Relevance</th>
-                      <th>Depth</th>
-                      <th>Overall</th>
-                  </tr>
-              </thead>
-              <tbody style="text-align: center;">
-                  <tr style="text-align: left;">
-                      <td colspan="9" style="color:blue;"><strong><em>Open-Sourced</em></strong></td>
-                  </tr>
-                  <tr>
-                      <td>GLM4-9B</td>
-                      <td>19.6</td>
-                      <td>16.3</td>
-                      <td>12.5</td>
-                      <td>26.9</td>
-                      <td>26.7</td>
-                      <td>27.9</td>
-                      <td>27.7</td>
-                      <td>14.0</td>
-                  </tr>
-                  <tr>
-                      <td>InternLM2.5-7B</td>
-                      <td>14.4</td>
-                      <td>12.3</td>
-                      <td>10.4</td>
-                      <td>28.0</td>
-                      <td>29.1</td>
-                      <td>26.5</td>
-                      <td>32.8</td>
-                      <td>16.3</td>
-                  </tr>
-                  <tr>
-                      <td>Qwen2.5-7B</td>
-                      <td>17.4</td>
-                      <td>9.3</td>
-                      <td>9.5</td>
-                      <td>28.2</td>
-                      <td>28.7</td>
-                      <td>29.7</td>
-                      <td><u>35.6</u></td>
-                      <td><u>21.7</u></td>
-                  </tr>
-                  <tr>
-                      <td>Llama3.1-8B</td>
-                      <td><u>23.7</u></td>
-                      <td><strong>24.6</strong></td>
-                      <td>16.9</td>
-                      <td>25.9</td>
-                      <td>25.6</td>
-                      <td>26.4</td>
-                      <td>23.7</td>
-                      <td>8.7</td>
-                  </tr>
-                  <tr style="text-align: left;">
-                      <td colspan="9" style="color:red;"><strong><em>Proprietary</em></strong></td>
-                  </tr>
-                  <tr>
-                      <td>GPT-4o-mini</td>
-                      <td>19.9</td>
-                      <td>19.6</td>
-                      <td><u>17.9</u></td>
-                      <td><u>30.5</u></td>
-                      <td><u>30.7</u></td>
-                      <td>32.9</td>
-                      <td>30.9</td>
-                      <td>21.3</td>
-                  </tr>
-                  <tr>
-                      <td>GPT-4o</td>
-                      <td><strong>27.7</strong></td>
-                      <td><u>20.0</u></td>
-                      <td><strong>20.6</strong></td>
-                      <td><strong>39.5</strong></td>
-                      <td><strong>42.1</strong></td>
-                      <td><strong>43.9</strong></td>
-                      <td><strong>49.8</strong></td>
-                      <td><strong>40.2</strong></td>
-                  </tr>
-              </tbody>
-
-          </table>
-
-          <p>For each model, the input papers for the summarization stage are the papers retrieved during the retrieval stage. <strong>Bold</strong> represents the best performance among all models, and <u>underline</u> represents the second-best performance among all models.</p>
-          <p>In our setting, GPT-4o achieved the highest precision in retrieval and outperformed all other models in summarization. Although GPT-4o-mini performed similarly to GPT-4o in language quality, it lagged slightly in retrieval stage. Qwen2.5-7B-Instruct and InternLM2.5-7B-Chat, despite weaker retrieval, produced coherent summaries, while Llama3.1-8B-Instruct struggled with complex summarization tasks while performing well in retrieval stage.</p>
-          
-        </div>
+        <div  style="text-align: center;">
+          <h2 class="title is-3"  style="text-align: center;">Benchmark Statistics</h2>          
+          <div class="columns is-centered">
+            <!-- Left Image Column -->
+            <div class="column is-half" style="display: flex; justify-content: center;">
+              <img src="static/images/domains_square.png" alt="LA-Eval Left" class="center-image" style="max-height: 100%; width: auto; object-fit: cover;"/>
+            </div>
+            
+            <!-- Right Image Column -->
+            <div class="column is-half" style="display: flex; justify-content: center;">
+              <img src="static/images/tokens_square.png" alt="LA-Eval Right" class="center-image" style="max-height: 100%; width: auto; object-fit: cover;"/>
+            </div>
+          </div>
+          <p style="text-align: center;">Figure 2: <em>Left</em>: Distribution of Domains. <em>Right</em>: Distribution of Context Lengths.</p>
+      <br>
+      <br>
+         <h2 class="title is-3"  style="text-align: center;">Main Results</h2>          
+          <img src="static/images/main_results.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto;"/>
+          <p style="text-align: center;">Figure 3: <em>Main Results.</em> For each model, the input papers for the summarization stage are the papers retrieved during the retrieval stage. <strong>Bold</strong> represents the best performance among all models, and <u>underline</u> represents the second-best performance among all models.</p>
+      <br>
+      <br>
+      <h2 class="title is-3"  style="text-align: center;">Sole Summarization</h2>          
+          <img src="static/images/sole_summarization.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto;"/>
+          <p style="text-align: center;">Figure 4: <em>Sole Summarization.</em> The &#916; columns show the performance differences compared to the <em>Two-stage Summarization</em> in Figure 2.</p>
+      <br>
+      <br>
+      <!-- <h2 class="title is-3"  style="text-align: center;">Context Lengths Statistics</h2>          
+          <img src="static/images/tokens.png" alt="LA-Eval" class="center-image" style="max-width: 50%; height: auto;"/>
+          <p style="text-align: center;">Figure 4: <em>Average Number of Cases and Percentile Across Varying Context Lengths.</em></p>
+      <br>
+      <br> -->
+      <h2 class="title is-3"  style="text-align: center;">Performance Analysis</h2>          
+          <img src="static/images/scores.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto;"/>
+          <p style="text-align: center;">Figure 5: <em>Retrieval Stage Performance Across Varying Context Lengths.</em> </p>
+      <br>
+      <br>
         </div>
       </div>
       </div>
@@ -350,62 +284,6 @@
   </div>
 </div>
 </section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container  is-max-desktop">
-      <div class="columns is-centered">
-      <div class="column is-full">
-        <div>
-      <h2 class="title is-3" style="text-align: center;">Context Analysis</h2>
-      
-            <!-- Context Length Statistics Section -->
-            <div class="level-set has-text-justified">
-              <!-- <h3 style="text-align: center;"><strong>Context Length Statistics</strong></h3> -->
-              <div class="columns is-vcentered">
-                <!-- Left Column for Image -->
-                <div class="column is-half">
-                  <img src="static/images/tokens.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto; display: block;"/>
-                </div>
-                <!-- Right Column for Text -->
-                <div class="column is-half">
-                  <p>LA-Eval covers a wide range of context lengths, with a focus on mid-to-long contexts, particularly in the 16k-32k token range. This distribution aligns well with real-world applications that require extensive information retrieval from large datasets. By including diverse context lengths, the benchmark enables comprehensive evaluation of models' abilities to manage large-scale, complex inputs.</p>
-                </div>
-                
-              </div>
-            </div>
-            <br>
-
-
-        <!-- Retrieval Performance Across Context Lengths Section -->
-            <!-- <h3 style="text-align: center;"><strong>Retrieval Performance Across Context Lengths</strong></h3> -->
-            <div>
-              <img src="static/images/scores.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto;"/>
-              <p>
-                As context length increases, model performance declines across all LLMs, highlighting the challenge of long-context retrieval. GPT-4o consistently performs best, showcasing its strong capacity for handling extended contexts. In contrast, models with a theoretical 1M token window struggled to perform effectively at such scales, emphasizing the gap between theoretical and practical capabilities in long-context tasks.
-              </p>
-            </div>
-        </div>
-        </div>
-      </div>
-      </div>
-   </div>
- </div>
-</section>
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
