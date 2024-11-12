@@ -56,17 +56,17 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=WOyBiT4AAAAJ" target="_blank">Chonghua Wang</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://scholar.google.com/citations?user=C7RtP4oAAAAJ" target="_blank">Jingming Zhuo</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a><sup>*</sup>,</span>
+                    <a href="https://scholar.google.com/citations?user=SBPkYz8AAAAJ" target="_blank">Rui Pan</a><sup>*</sup>,</span>
                   </span>
                   <span class="author-block">
-                    <a href="FORTH AUTHOR PERSONAL LINK" target="_blank">Forth Author</a>,</span>
+                    <a href="https://scholar.google.com/citations?user=DUoKqssAAAAJ" target="_blank">Yanxin Lu</a>,</span>
                   </span>
                   <span class="author-block">
-                    <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Tong Zhang</a>
+                    <a href="https://tongzhang-ml.org/" target="_blank">Tong Zhang</a>
                   </span>
                   </div>
 
@@ -133,7 +133,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="text-align: center;">
-      <img src="static/images/pipeline.png" alt="LA-Eval" class="center-image"  style="max-width: 70%; height: auto;"/>
+      <img src="static/images/pipeline.png" alt="LA-Eval" class="center-image"  style="max-width: 100%; height: auto;"/>
       <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
         <!-- <source src="static/videos/banner_video.mp4"
@@ -209,12 +209,12 @@
     <div class="container  is-max-desktop">
       <div class="columns is-centered">
       <div class="column is-full">
-        <div style="max-width: 800px; margin: 0 auto;">
+        <div>
       <h2 class="title is-3" style="text-align: center;">Overview</h2>
       <div class="level-set has-text-justified">
 
           <p>
-              LA-Eval aims to evaluate the performance of LLMs in real-world long-text tasks encountered in AI-assisted research scenarios, where retrieving through extensive documents for relevant information and synthesizing it into summaries are crucial. To effectively measure the competencies, we have constructed corresponding stages as follows:
+              LA-Eval aims to evaluate the performance of LLMs in real-world long-text tasks encountered in AI-assisted research scenarios, where retrieving through extensive documents for relevant information and synthesizing it into summaries are crucial. To effectively assess model performance in these long-context scenarios, we have constructed corresponding stages as follows:
           </p>
           <br>
           <strong>1. Retrieval Stage</strong>
@@ -240,16 +240,16 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <div style="max-width: 800px; margin: 0 auto;">
+          <div>
          <h2 class="title is-3"  style="text-align: center;">Main Results</h2>
           <div class="level-set has-text-justified">
             <p>We use precision, recall, and F1 score to report the performance of the LLM-based agent during the retrieval stage, and use four criteria to achieve a comprehensive evaluation of the generated surveys during the summarization stage, where the dimensions of readability and logicality are used to assess the language-related capabilities of LLMs, while relevance and depth are used to evaluate the domain-related capabilities.</p>
             <table style="width:100%; border-collapse:collapse;">
               <thead>
                   <tr>
-                      <th rowspan="2">Models</th>
-                      <th colspan="3">Retrieval Stage</th>
-                      <th colspan="5">Summarization Stage</th>
+                      <th rowspan="2" style="text-align: center;">Models</th>
+                      <th colspan="3" style="text-align: center;">Retrieval Stage</th>
+                      <th colspan="5" style="text-align: center;">Summarization Stage</th>
                   </tr>
                   <tr>
                       <th>Precision</th>
@@ -262,8 +262,8 @@
                       <th>Overall</th>
                   </tr>
               </thead>
-              <tbody>
-                  <tr>
+              <tbody style="text-align: center;">
+                  <tr style="text-align: left;">
                       <td colspan="9" style="color:blue;"><strong><em>Open-Sourced</em></strong></td>
                   </tr>
                   <tr>
@@ -310,13 +310,13 @@
                       <td>23.7</td>
                       <td>8.7</td>
                   </tr>
-                  <tr>
+                  <tr style="text-align: left;">
                       <td colspan="9" style="color:red;"><strong><em>Proprietary</em></strong></td>
                   </tr>
                   <tr>
                       <td>GPT-4o-mini</td>
                       <td>19.9</td>
-                      <td><u>19.6</u></td>
+                      <td>19.6</td>
                       <td><u>17.9</u></td>
                       <td><u>30.5</u></td>
                       <td><u>30.7</u></td>
@@ -326,19 +326,21 @@
                   </tr>
                   <tr>
                       <td>GPT-4o</td>
-                      <td><strong>34.5</strong></td>
-                      <td>15.2</td>
-                      <td><strong>18.1</strong></td>
-                      <td><strong>39.8</strong></td>
-                      <td><strong>42.1</strong></td>
+                      <td><strong>27.7</strong></td>
+                      <td><u>20.0</u></td>
+                      <td><strong>20.6</strong></td>
                       <td><strong>39.5</strong></td>
+                      <td><strong>42.1</strong></td>
                       <td><strong>43.9</strong></td>
+                      <td><strong>49.8</strong></td>
                       <td><strong>40.2</strong></td>
                   </tr>
               </tbody>
-              <p> For each model, the input papers for the summarization stage are the papers retrieved during the retrieval stage. <strong>Bold</strong> represents the best performance among all models, and <u>underline</u> represents the second-best performance among all models.</p>
 
           </table>
+
+          <p>For each model, the input papers for the summarization stage are the papers retrieved during the retrieval stage. <strong>Bold</strong> represents the best performance among all models, and <u>underline</u> represents the second-best performance among all models.</p>
+          <p>In our setting, GPT-4o achieved the highest precision in retrieval and outperformed all other models in summarization. Although GPT-4o-mini performed similarly to GPT-4o in language quality, it lagged slightly in retrieval stage. Qwen2.5-7B-Instruct and InternLM2.5-7B-Chat, despite weaker retrieval, produced coherent summaries, while Llama3.1-8B-Instruct struggled with complex summarization tasks while performing well in retrieval stage.</p>
           
         </div>
         </div>
@@ -349,7 +351,46 @@
 </div>
 </section>
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container  is-max-desktop">
+      <div class="columns is-centered">
+      <div class="column is-full">
+        <div>
+      <h2 class="title is-3" style="text-align: center;">Context Analysis</h2>
+      
+            <!-- Context Length Statistics Section -->
+            <div class="level-set has-text-justified">
+              <h3 style="text-align: center;"><strong>Context Length Statistics</strong></h3>
+              <div class="columns is-vcentered">
+                <!-- Left Column for Image -->
+                <div class="column is-half">
+                  <img src="static/images/tokens.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto; display: block;"/>
+                </div>
+                <!-- Right Column for Text -->
+                <div class="column is-half">
+                  <p>LA-Eval covers a wide range of context lengths, with a focus on mid-to-long contexts, particularly in the 16k-32k token range. This distribution aligns well with real-world applications that require extensive information retrieval from large datasets. By including diverse context lengths, the benchmark enables comprehensive evaluation of models' abilities to manage large-scale, complex inputs.</p>
+                </div>
+              </div>
+            </div>
+            <br>
 
+
+        <!-- Retrieval Performance Across Context Lengths Section -->
+            <h3 style="text-align: center;"><strong>Retrieval Performance Across Context Lengths</strong></h3>
+            <div>
+              <img src="static/images/scores.png" alt="LA-Eval" class="center-image" style="max-width: 100%; height: auto;"/>
+              <p>
+                As context length increases, model performance declines across all LLMs, highlighting the challenge of long-context retrieval. GPT-4o consistently performs best, showcasing its strong capacity for handling extended contexts. In contrast, models with a theoretical 1M token window struggled to perform effectively at such scales, emphasizing the gap between theoretical and practical capabilities in long-context tasks.
+              </p>
+            </div>
+        </div>
+        </div>
+      </div>
+      </div>
+   </div>
+ </div>
+</section>
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
